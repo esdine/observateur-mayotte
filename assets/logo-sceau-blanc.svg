@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Logo L'Observateur de Mayotte : sceau circulaire avec hippocampe">
+  <defs>
+    <path id="arcHaut" d="M 70 256 A 186 186 0 0 1 442 256"/>
+    <path id="arcBas" d="M 38 256 A 218 218 0 0 0 474 256"/>
+  </defs>
+  <g fill="none" stroke="#f5f4f0">
+    <circle cx="256" cy="256" r="244" stroke-width="8"/>
+    <circle cx="256" cy="256" r="230" stroke-width="2"/>
+    <circle cx="256" cy="256" r="152" stroke-width="3"/>
+  </g>
+  <g fill="#f5f4f0" font-family="Georgia, 'Times New Roman', serif" font-weight="bold">
+    <text font-size="44" letter-spacing="8">
+      <textPath href="#arcHaut" startOffset="50%" text-anchor="middle">L&#8217;OBSERVATEUR</textPath>
+    </text>
+    <text font-size="44" letter-spacing="12">
+      <textPath href="#arcBas" startOffset="50%" text-anchor="middle">DE MAYOTTE</textPath>
+    </text>
+  </g>
+  <g fill="#f5f4f0">
+    <path d="M 52 246 L 62 256 L 52 266 L 42 256 Z"/>
+    <path d="M 460 246 L 470 256 L 460 266 L 450 256 Z"/>
+  </g>
+  <!-- hippocampe au trait -->
+  <g fill="none" stroke="#f5f4f0" stroke-linecap="round">
+    <path stroke-width="13" d="M 200 190
+      C 220 180 238 178 246 192
+      C 250 172 272 164 286 176
+      C 302 188 306 208 298 228
+      C 316 252 320 286 308 316
+      C 300 340 284 352 278 368
+      C 272 388 292 398 304 390
+      C 314 382 310 368 298 370"/>
+    <path stroke-width="8" d="M 312 246 C 338 260 338 296 310 312"/>
+    <path stroke-width="7" d="M 276 162 L 282 148"/>
+    <path stroke-width="7" d="M 290 170 L 300 158"/>
+    <path stroke-width="7" d="M 296 250 L 280 254"/>
+    <path stroke-width="7" d="M 302 282 L 286 284"/>
+    <path stroke-width="7" d="M 296 312 L 280 312"/>
+    <path stroke-width="7" d="M 284 338 L 270 340"/>
+  </g>
+  <circle cx="272" cy="192" r="5.5" fill="#f5f4f0"/>
+  <text x="204" y="392" fill="#f5f4f0" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="4" text-anchor="middle">MMXXVI</text>
+</svg>
