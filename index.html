@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!doctype html>
 <html lang="fr">
 <head>
@@ -318,6 +321,23 @@
         <p class="dek">La montée vers le col a départagé les favoris dans les derniers hectomètres.</p>
         <p class="byline">Article fictif</p>
       </article>
+    </div>
+  </section>
+
+  <!-- dernières publications (alimentée automatiquement par _posts/) -->
+  <section class="band" id="dernieres">
+    <div class="band-head">
+      <h2>Dernières publications</h2>
+    </div>
+    <div class="cards">
+      {% for p in site.posts limit: 3 %}
+      <article class="col story">
+        <p class="kicker">{{ p.rubrique | default: "L'Écho du Lagon" }}</p>
+        <h3 class="hed hed-md"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+        <p class="dek">{{ p.chapo | strip_html | truncate: 120 }}</p>
+        <p class="byline">{{ p.date_affichee }} · Article fictif</p>
+      </article>
+      {% endfor %}
     </div>
   </section>
 

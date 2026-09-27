@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+{% include tete.html %}
+<title>{{ page.title }} — L'Écho du Lagon</title>
+<meta name="description" content="{{ page.chapo | strip_html | truncate: 155 }}">
+</head>
+<body>
+<div class="sheet">
+  {% include note-demo.html %}
+  {% include nav.html %}
+
+  <article class="article-vue tribune">
+    <a class="retour" href="{{ '/#opinion' | relative_url }}">← Retour à la une</a>
+    <div class="tribune-tete">
+      <div class="nom-rubrique">L'Écho du Lagon</div>
+      <svg width="120" height="12" viewBox="0 0 120 12" aria-hidden="true">
+        <path d="M2 8 Q12 2 22 8 T42 8 T62 8 T82 8 T102 8 T118 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <div class="sous-titre">Tribune</div>
+    </div>
+    <h1>{{ page.title }}</h1>
+    <p class="chapo">{{ page.chapo }}</p>
+    <div class="auteur-tete">
+      <div class="medaillon">{{ page.initiales }}</div>
+      <p><b>{{ page.auteur }}</b>{{ page.qualite }}<br>Auteur fictif — maquette de démonstration.</p>
+    </div>
+    <div class="signature">
+      <span>Publié le {{ page.date_affichee }}{% if page.heure %} à {{ page.heure }}{% endif %} · Lecture {{ page.lecture }} · <b>Tribune fictive</b></span>
+      <button type="button" id="btn-partage">Copier le lien</button>
+    </div>
+
+    {{ content }}
+
+    <p class="avertissement">Les tribunes publiées dans L'Écho du Lagon n'engagent que leurs auteurs et ne reflètent pas la position de la rédaction. Ce texte est fictif : il illustre le gabarit de la rubrique dans cette maquette de démonstration.</p>
+    <div class="proposer">
+      <h3>Proposer une tribune</h3>
+      <p>L'Écho du Lagon accueille les points de vue argumentés sur la vie mahoraise (4 000 signes maximum, signés et sourcés). Adresse de la rubrique : <span>tribunes@observateur-mayotte.exemple</span> — adresse fictive de démonstration.</p>
+    </div>
+
+    {% assign autres = site.posts | where_exp: "p", "p.url != page.url" %}
+    {% if autres.size > 0 %}
+    <section class="band" style="margin-top:34px">
+      <div class="band-head"><h2>Dans L'Écho du Lagon</h2></div>
+      <div class="cards">
+        {% for p in autres limit: 3 %}
+        <article class="col story">
+          <p class="kicker">{{ p.rubrique | default: "L'Écho du Lagon" }}</p>
+          <h3 class="hed hed-md"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+          <p class="byline">{{ p.date_affichee }} · Article fictif</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </article>
+
+  {% include pied.html %}
+</div>
+<script>
+  document.getElementById('btn-partage').addEventListener('click', function(){
+    var btn = this;
+    var url = location.href;
+    function fait(msg){ btn.textContent = msg; setTimeout(function(){ btn.textContent = 'Copier le lien'; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function(){ fait('Lien copié ✓'); }, function(){ fait(url); });
+    } else {
+      fait(url);
+    }
+  });
+</script>
+</body>
+</html>

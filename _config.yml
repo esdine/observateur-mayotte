@@ -1,0 +1,16 @@
+# L'Observateur de Mayotte — configuration Jekyll (GitHub Pages)
+title: "L'Observateur de Mayotte"
+description: "Maquette de démonstration d'un journal en ligne mahorais. Journal fictif : tous les articles sont inventés."
+lang: fr
+timezone: Indian/Mayotte
+url: "https://esdine.github.io"
+baseurl: "/observateur-mayotte"
+
+markdown: kramdown
+future: true
+
+# Adresse des futurs articles (les deux premiers gardent leur permalink explicite)
+permalink: /articles/:slug.html
+
+exclude:
+  - README.md

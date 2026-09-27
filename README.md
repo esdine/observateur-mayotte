@@ -1,40 +1,72 @@
-# L'Observateur de Mayotte — site statique (maquette de démonstration)
+# L'Observateur de Mayotte — site Jekyll (maquette de démonstration)
 
 Maquette d'un journal en ligne mahorais fictif, au style « broadsheet » des grands quotidiens.
 **Ce journal n'existe pas** : tous les articles, signatures, chiffres et adresses sont inventés,
 et chaque page l'annonce (bandeau en tête, mentions en pied de page). L'identité visuelle
 (sceau hippocampe compris) est une création originale réalisée pour cette maquette.
 
+Site en ligne : <https://esdine.github.io/observateur-mayotte/> — construit par le
+Jekyll natif de GitHub Pages (branche `gh-pages`), sans aucune installation locale.
+
 ## Structure
 
 ```
-index.html            La une (7 rubriques, rail d'opinions, Matinale)
-article.html          Gabarit page article (la barge « Karihani »)
-tribune.html          Gabarit tribune de la rubrique L'Écho du Lagon
-assets/
-  style.css           Feuille de style commune (thème clair + sombre automatique)
-  favicon.svg/.ico    Favicon hippocampe (SVG moderne + ICO 16/32/64/256)
-  apple-touch-icon.png  Icône 256 px pour mobile
-  logo-sceau-couleur.svg / -encre.svg / -blanc.svg
-  logo-horizontal.svg Sceau + nom, pour en-têtes larges
+index.html            La une (art dirigée à la main + bande « Dernières publications » automatique)
+_config.yml           Configuration Jekyll (baseurl, permaliens des futurs articles)
+_posts/               LES ARTICLES — un fichier Markdown par papier
+_layouts/
+  article.html        Gabarit page article (chapô, signature, lettrine, Repères…)
+  tribune.html        Gabarit tribune L'Écho du Lagon (bandeau vague, auteur en tête…)
+_includes/            Briques partagées : head, note démo, nav compacte, pied de page
+assets/               style.css (thème clair + sombre), logos, favicons
 ```
 
-## Aperçu local
+## Ajouter un article
+
+Créer `_posts/AAAA-MM-JJ-mon-slug.md` :
+
+```markdown
+---
+layout: article            # ou « tribune » pour L'Écho du Lagon
+title: "Titre de l'article"
+date: 2026-10-05
+date_affichee: "5 octobre 2026"
+heure: "06 h 00"
+rubrique: "Économie"
+chapo: "Le chapô en une ou deux phrases."
+auteur: "Prénom Nom"
+initiales: "PN"
+bio_auteur: "Une ligne de présentation."   # gabarit article
+# qualite: "Économiste."                   # gabarit tribune (remplace bio_auteur)
+lecture: "4 min"
+etiquettes: [Mot-clé, Autre]
+---
+
+Le corps de l'article en Markdown. Les blocs spéciaux (exergue, Repères,
+Lire aussi) s'écrivent en HTML avec les classes de la charte, voir les
+deux articles existants en modèle.
+```
+
+Le nouvel article apparaît automatiquement dans « Dernières publications »
+sur la une et dans « À lire ensuite » des autres articles. Les rubriques de
+la une elle-même restent choisies à la main (c'est une page art dirigée).
+
+## Publier
 
 ```bash
-python -m http.server 8080
+git add . ; git commit -m "..." ; git push origin main main:gh-pages
 ```
 
-puis ouvrir <http://localhost:8080>. Aucune dépendance, aucun build : du HTML, du CSS,
-et quelques lignes de JavaScript (formulaire de démonstration, bouton « Copier le lien »).
-Les polices (UnifrakturMaguntia, Libre Franklin) sont chargées depuis Google Fonts ;
-sans réseau, le site retombe proprement sur Georgia/Arial.
+GitHub Pages reconstruit le site en une minute environ. Les deux premiers
+articles gardent leurs adresses historiques (`/article.html`, `/tribune.html`) ;
+les suivants sortiront en `/articles/<slug>.html`.
 
-## Déploiement
+## Aperçu local (facultatif)
 
-Copier le dossier tel quel sur n'importe quel hébergement statique (Nginx/Apache,
-GitHub Pages, Netlify, Cloudflare Pages…). Il n'y a ni backend ni base de données :
-le formulaire « La Matinale » n'envoie rien (démonstration).
+Sans Ruby/Jekyll sur le poste, l'aperçu fidèle se fait sur une branche de
+test poussée sur `gh-pages`, ou en installant Jekyll (`gem install jekyll`)
+puis `jekyll serve`. Le HTML statique seul (`python -m http.server`) ne
+rend plus les gabarits, puisque les pages passent par Liquid.
 
 ## Identité graphique
 

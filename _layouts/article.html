@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+{% include tete.html %}
+<title>{{ page.title }} — L'Observateur de Mayotte</title>
+<meta name="description" content="{{ page.chapo | strip_html | truncate: 155 }}">
+</head>
+<body>
+<div class="sheet">
+  {% include note-demo.html %}
+  {% include nav.html %}
+
+  <article class="article-vue">
+    <a class="retour" href="{{ '/' | relative_url }}">← Retour à la une</a>
+    <p class="kicker">{{ page.rubrique }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="chapo">{{ page.chapo }}</p>
+    <div class="signature">
+      <span>Par <b>{{ page.auteur }}</b> · Publié le {{ page.date_affichee }}{% if page.heure %} à {{ page.heure }}{% endif %} · Lecture {{ page.lecture }} · <b>Article fictif</b></span>
+      <button type="button" id="btn-partage">Copier le lien</button>
+    </div>
+
+    {{ content }}
+
+    {% if page.etiquettes %}
+    <div class="etiquettes">
+      {% for e in page.etiquettes %}<span>{{ e }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="auteur">
+      <div class="medaillon">{{ page.initiales }}</div>
+      <p><b>{{ page.auteur }}</b>{{ page.bio_auteur }}</p>
+    </div>
+
+    {% assign autres = site.posts | where_exp: "p", "p.url != page.url" %}
+    {% if autres.size > 0 %}
+    <section class="band" style="margin-top:34px">
+      <div class="band-head"><h2>À lire ensuite</h2></div>
+      <div class="cards">
+        {% for p in autres limit: 3 %}
+        <article class="col story">
+          <p class="kicker">{{ p.rubrique | default: "L'Écho du Lagon" }}</p>
+          <h3 class="hed hed-md"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+          <p class="byline">{{ p.date_affichee }} · Article fictif</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </article>
+
+  {% include pied.html %}
+</div>
+<script>
+  document.getElementById('btn-partage').addEventListener('click', function(){
+    var btn = this;
+    var url = location.href;
+    function fait(msg){ btn.textContent = msg; setTimeout(function(){ btn.textContent = 'Copier le lien'; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function(){ fait('Lien copié ✓'); }, function(){ fait(url); });
+    } else {
+      fait(url);
+    }
+  });
+</script>
+</body>
+</html>
