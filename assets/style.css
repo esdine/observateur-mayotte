@@ -294,6 +294,15 @@ figcaption{font-family:var(--sans);font-size:.66rem;color:var(--ink-mute);margin
 .proposer p{font-size:.8rem;color:var(--ink-soft);margin:0;}
 .proposer p span{user-select:all;color:var(--accent);}
 
+/* ---------- revue de presse ---------- */
+.revue-liste{list-style:none;margin:0;padding:0;}
+.revue-liste li{border-top:1px solid var(--rule);padding:9px 0;}
+.revue-liste li:first-child{border-top:none;padding-top:0;}
+.revue-liste a{font-family:var(--serif);font-weight:700;font-size:.92rem;line-height:1.3;}
+.revue-liste a:hover{text-decoration:underline;}
+.revue-source{font-family:var(--sans);font-size:.66rem;color:var(--ink-mute);margin:10px 0 0;}
+.revue-source a{color:var(--accent);}
+
 /* ---------- bandeau abonnement ---------- */
 .abo{
   border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule);

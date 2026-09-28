@@ -68,6 +68,16 @@ test poussée sur `gh-pages`, ou en installant Jekyll (`gem install jekyll`)
 puis `jekyll serve`. Le HTML statique seul (`python -m http.server`) ne
 rend plus les gabarits, puisque les pages passent par Liquid.
 
+## Revue de presse (vrais titres, liens vers les rédactions)
+
+La bande « Revue de presse » de la une est alimentée par `_data/revue.yml`,
+généré par `outils/maj_revue.py` : les flux RSS de Mayotte Hebdo, du Journal
+de Mayotte et de L'Info Kwezi, dont on ne conserve **que le titre et le lien**
+de chaque article — pas d'extrait, pas de description, pas d'image — avec
+attribution et renvoi vers le site de chaque rédaction. C'est le modèle
+« titres + liens » compatible avec le droit d'auteur et le droit voisin de
+la presse ; ne pas y ajouter d'extraits sans accord des éditeurs.
+
 ## Météo réelle (première donnée non fictive)
 
 Le bloc « Le temps à Mamoudzou » de la une est alimenté par `_data/meteo.yml`,

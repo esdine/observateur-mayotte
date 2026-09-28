@@ -334,6 +334,29 @@ layout: null
     </div>
   </section>
 
+  {% if site.data.revue and site.data.revue.sources.size > 0 %}
+  <!-- revue de presse (titres + liens vers les rédactions, aucun contenu reproduit) -->
+  <section class="band" id="revue">
+    <div class="band-head">
+      <h2>Revue de presse</h2>
+      <span style="font-family:var(--sans);font-size:.66rem;color:var(--ink-mute)">Ce que titre la presse mahoraise — liens vers les rédactions</span>
+    </div>
+    <div class="cards">
+      {% for s in site.data.revue.sources %}
+      <div class="col">
+        <p class="kicker">{{ s.nom }}</p>
+        <ul class="revue-liste">
+          {% for t in s.titres %}
+          <li><a href="{{ t.lien }}" rel="noopener">{{ t.titre }}</a></li>
+          {% endfor %}
+        </ul>
+        <p class="revue-source">Titres © <a href="{{ s.site }}" rel="noopener">{{ s.nom }}</a> — lire sur leur site.</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <!-- dernières publications (alimentée automatiquement par _posts/) -->
   <section class="band" id="dernieres">
     <div class="band-head">
