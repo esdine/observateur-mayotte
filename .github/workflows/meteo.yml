@@ -1,0 +1,33 @@
+name: Météo quotidienne
+
+on:
+  schedule:
+    - cron: "45 2 * * *"   # 05 h 45 à Mayotte (UTC+3)
+  workflow_dispatch: {}     # lancement manuel possible depuis l'onglet Actions
+
+permissions:
+  contents: write
+
+jobs:
+  maj-meteo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Collecter la météo (Open-Meteo)
+        run: python3 outils/maj_meteo.py
+
+      - name: Commiter et publier si changement
+        run: |
+          if git diff --quiet -- _data/meteo.yml; then
+            echo "Météo inchangée, rien à publier."
+            exit 0
+          fi
+          git config user.name "meteo-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add _data/meteo.yml
+          git commit -m "Météo du jour à Mamoudzou (Open-Meteo)"
+          git push origin HEAD:main
+          git push origin HEAD:gh-pages

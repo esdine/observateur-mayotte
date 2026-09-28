@@ -19,8 +19,12 @@ layout: null
   <p class="demo-note">ÉDITION DE DÉMONSTRATION — journal fictif ; tous les articles, chiffres et signatures de ce site sont inventés.</p>
 
   <div class="utility">
-    <span><b>Dimanche 28 septembre 2026</b> · Édition du matin</span>
+    <span><b>{{ site.data.meteo.date_affichee | default: "Dimanche 28 septembre 2026" }}</b> · Édition du matin</span>
+    {% if site.data.meteo %}
+    <span>Mamoudzou {{ site.data.meteo.tmax }}° / {{ site.data.meteo.tmin }}° · {{ site.data.meteo.ciel }}</span>
+    {% else %}
     <span>Mamoudzou 29° / 24° · Mer belle dans le lagon</span>
+    {% endif %}
     <span>Kwezi ! · Édition en shimaoré à venir</span>
   </div>
 
@@ -145,14 +149,20 @@ layout: null
         <p class="byline">Article fictif</p>
       </article>
 
-      <aside class="meteo" aria-label="Marées et météo">
-        <h3>Marées à Mamoudzou — dimanche</h3>
+      <aside class="meteo" aria-label="Météo du jour">
+        {% if site.data.meteo %}
+        <h3>Le temps à Mamoudzou</h3>
         <table>
-          <tr><td>Pleine mer</td><td>05 h 42 · 3,4 m</td></tr>
-          <tr><td>Basse mer</td><td>11 h 58 · 0,9 m</td></tr>
-          <tr><td>Pleine mer</td><td>18 h 07 · 3,6 m</td></tr>
-          <tr><td>Eau du lagon</td><td>27 °C</td></tr>
+          <tr><td>Températures</td><td>{{ site.data.meteo.tmin }}° / {{ site.data.meteo.tmax }}°</td></tr>
+          <tr><td>Ciel</td><td>{{ site.data.meteo.ciel }}</td></tr>
+          <tr><td>Vent</td><td>{{ site.data.meteo.vent_kmh }} km/h</td></tr>
+          {% if site.data.meteo.temp_mer %}<tr><td>Eau du lagon</td><td>{{ site.data.meteo.temp_mer }} °C</td></tr>{% endif %}
         </table>
+        <p style="margin:8px 0 0;font-size:.66rem;color:var(--ink-mute)">Données réelles Open-Meteo, mises à jour chaque matin. Marées : en attente des données SHOM.</p>
+        {% else %}
+        <h3>Le temps à Mamoudzou</h3>
+        <p style="margin:0;font-size:.75rem;color:var(--ink-mute)">Météo indisponible pour cette édition.</p>
+        {% endif %}
       </aside>
     </section>
 

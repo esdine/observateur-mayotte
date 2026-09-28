@@ -68,6 +68,19 @@ test poussée sur `gh-pages`, ou en installant Jekyll (`gem install jekyll`)
 puis `jekyll serve`. Le HTML statique seul (`python -m http.server`) ne
 rend plus les gabarits, puisque les pages passent par Liquid.
 
+## Météo réelle (première donnée non fictive)
+
+Le bloc « Le temps à Mamoudzou » de la une est alimenté par `_data/meteo.yml`,
+mis à jour chaque matin (05 h 45 heure de Mayotte) par la GitHub Action
+`.github/workflows/meteo.yml` : elle exécute `outils/maj_meteo.py` (Open-Meteo,
+API ouverte sans clé — températures, ciel, vent, température de l'eau), commite
+le fichier si la météo a changé et pousse `main` + `gh-pages`. Lancement manuel
+possible depuis l'onglet Actions (« Météo quotidienne » → Run workflow).
+La date affichée en tête de une vient du même fichier. Les horaires de marées
+(données SHOM, payantes) ne sont pas affichés tant qu'ils ne sont pas réels.
+NB : GitHub désactive les crons après 60 jours sans activité sur le dépôt ;
+un simple commit ou un lancement manuel les réactive.
+
 ## Identité graphique
 
 La charte complète (sceau, palette avec équivalents thème sombre, typographies,
