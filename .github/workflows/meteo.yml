@@ -22,6 +22,9 @@ jobs:
       - name: Collecter la revue de presse (titres + liens uniquement)
         run: python3 outils/maj_revue.py
 
+      - name: Collecter les appels d'offres Mayotte (BOAMP, open data)
+        run: python3 outils/maj_marches.py
+
       - name: Commiter et publier si changement
         run: |
           if git diff --quiet -- _data/; then

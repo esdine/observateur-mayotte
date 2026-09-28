@@ -68,6 +68,15 @@ test poussée sur `gh-pages`, ou en installant Jekyll (`gem install jekyll`)
 puis `jekyll serve`. Le HTML statique seul (`python -m http.server`) ne
 rend plus les gabarits, puisque les pages passent par Liquid.
 
+## Appels d'offres Mayotte (open data BOAMP)
+
+La bande « Appels d'offres — Mayotte » de la une est alimentée par
+`_data/marches.yml`, généré par `outils/maj_marches.py` : les six derniers
+avis de marché du département 976 via l'API open data du BOAMP
+(boamp-datadila.opendatasoft.com). Ces données publiques sont sous licence
+ouverte : la réutilisation est autorisée avec mention de la source, et
+chaque avis renvoie vers sa page officielle sur boamp.fr.
+
 ## Revue de presse (vrais titres, liens vers les rédactions)
 
 La bande « Revue de presse » de la une est alimentée par `_data/revue.yml`,

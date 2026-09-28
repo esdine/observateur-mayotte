@@ -237,6 +237,25 @@ layout: null
     </div>
   </section>
 
+  {% if site.data.marches and site.data.marches.avis.size > 0 %}
+  <!-- appels d'offres (open data BOAMP, licence ouverte) -->
+  <section class="band" id="marches">
+    <div class="band-head">
+      <h2>Appels d'offres — Mayotte</h2>
+      <span style="font-family:var(--sans);font-size:.66rem;color:var(--ink-mute)">Données réelles · Source <a class="plain" href="https://www.boamp.fr" rel="noopener" style="color:var(--accent)">BOAMP</a> (licence ouverte)</span>
+    </div>
+    <div class="cards">
+      {% for a in site.data.marches.avis %}
+      <article class="col story">
+        <p class="kicker">{{ a.type }}{% if a.limite %} · limite {{ a.limite }}{% endif %}</p>
+        <h3 class="hed hed-sm"><a href="{{ a.lien }}" rel="noopener">{{ a.objet }}</a></h3>
+        <p class="byline">{{ a.acheteur }}{% if a.parution %} · paru le {{ a.parution }}{% endif %}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
   <!-- bande lagon -->
   <section class="band" id="lagon">
     <div class="band-head">
