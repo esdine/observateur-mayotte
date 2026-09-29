@@ -1,8 +1,8 @@
 # Genere par outils/maj_meteo.py - source Open-Meteo (donnees reelles)
-date_affichee: "Lundi 28 septembre 2026"
+date_affichee: "Mardi 29 septembre 2026"
 tmin: 24
-tmax: 29
-ciel: "Couvert"
-vent_kmh: 14
+tmax: 30
+ciel: "Bruine légère"
+vent_kmh: 12
 temp_mer: 28
-maj: "2026-09-28T15:29+0300"
+maj: "2026-09-29T12:03+0300"
