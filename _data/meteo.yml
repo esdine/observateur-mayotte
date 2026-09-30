@@ -1,8 +1,8 @@
 # Genere par outils/maj_meteo.py - source Open-Meteo (donnees reelles)
-date_affichee: "Mardi 29 septembre 2026"
-tmin: 24
-tmax: 30
-ciel: "Bruine légère"
-vent_kmh: 12
+date_affichee: "Mercredi 30 septembre 2026"
+tmin: 23
+tmax: 29
+ciel: "Bruine"
+vent_kmh: 8
 temp_mer: 28
-maj: "2026-09-29T12:03+0300"
+maj: "2026-09-30T12:00+0300"
