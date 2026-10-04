@@ -14,14 +14,14 @@ sources:
   - nom: "Le Journal de Mayotte"
     site: "https://lejournaldemayotte.yt/"
     titres:
+      - titre: "Deux nouvelles écoles programmées à Mamoudzou"
+        lien: "https://lejournaldemayotte.yt/2026/10/03/deux-nouvelles-ecoles-programmees-a-mamoudzou/"
+      - titre: "Dix éducateurs de l’US Kavani partis en immersion à Berlin grâce aux fonds européens"
+        lien: "https://lejournaldemayotte.yt/2026/10/03/dix-educateurs-de-lus-kavani-partis-en-immersion-a-berlin-grace-aux-fonds-europeens/"
       - titre: "Mayotte installe son Observatoire des dynamiques territoriales pour piloter l’offre scolaire"
         lien: "https://lejournaldemayotte.yt/2026/10/03/mayotte-installe-son-observatoire-des-dynamiques-territoriales-pour-piloter-loffre-scolaire/"
       - titre: "Choose Outre-Mer met les recruteurs face aux défis de l’insertion à Mayotte"
         lien: "https://lejournaldemayotte.yt/2026/10/02/choose-outre-mer-met-les-recruteurs-face-aux-defis-de-linsertion-a-mayotte/"
-      - titre: "Octobre Rose veut aller directement à la rencontre des femmes à Mayotte"
-        lien: "https://lejournaldemayotte.yt/2026/10/02/octobre-rose-veut-aller-directement-a-la-rencontre-des-femmes-a-mayotte/"
-      - titre: "« Le travail de recensement est en cours », le maire de Mamoudzou s’est lancé dans un contrôle du bâti"
-        lien: "https://lejournaldemayotte.yt/2026/10/02/le-travail-de-recensement-est-en-cours-le-maire-de-mamoudzou-sest-lance-dans-un-controle-du-bati/"
   - nom: "L'Info Kwezi"
     site: "https://www.linfokwezi.fr/"
     titres:
