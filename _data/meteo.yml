@@ -1,8 +1,8 @@
 # Genere par outils/maj_meteo.py - source Open-Meteo (donnees reelles)
-date_affichee: "Jeudi 8 octobre 2026"
+date_affichee: "Vendredi 9 octobre 2026"
 tmin: 23
-tmax: 28
-ciel: "Bruine"
-vent_kmh: 9
+tmax: 31
+ciel: "Partiellement nuageux"
+vent_kmh: 6
 temp_mer: 28
-maj: "2026-10-08T12:27+0300"
+maj: "2026-10-09T12:37+0300"
