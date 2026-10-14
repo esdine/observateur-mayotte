@@ -1,8 +1,8 @@
 # Genere par outils/maj_meteo.py - source Open-Meteo (donnees reelles)
-date_affichee: "Mardi 13 octobre 2026"
+date_affichee: "Mercredi 14 octobre 2026"
 tmin: 24
-tmax: 30
+tmax: 29
 ciel: "Bruine"
-vent_kmh: 12
+vent_kmh: 10
 temp_mer: 29
-maj: "2026-10-13T12:44+0300"
+maj: "2026-10-14T11:00+0300"
