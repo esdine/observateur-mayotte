@@ -1,8 +1,8 @@
 # Genere par outils/maj_meteo.py - source Open-Meteo (donnees reelles)
-date_affichee: "Vendredi 16 octobre 2026"
-tmin: 22
-tmax: 29
-ciel: "Averses faibles"
-vent_kmh: 10
+date_affichee: "Samedi 17 octobre 2026"
+tmin: 23
+tmax: 28
+ciel: "Bruine"
+vent_kmh: 11
 temp_mer: 28
-maj: "2026-10-16T10:30+0300"
+maj: "2026-10-17T10:11+0300"
