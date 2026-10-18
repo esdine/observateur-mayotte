@@ -1,5 +1,12 @@
 # Genere par outils/maj_marches.py - source BOAMP (open data, licence ouverte)
 avis:
+  - objet: "Maintenance préventive et corrective des panneaux photovoltaïques au profit des services de l’État relevant du périmètre de la préfecture…"
+    acheteur: "Secrétariat général commun de Guadeloupe"
+    type: "Services"
+    famille: "Marchés européens"
+    parution: "17 octobre 2026"
+    limite: "18 novembre 2026"
+    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-100459"
   - objet: "Fourniture d'équipements informatiques, numériques et RFID pour l'informatisation, la numérisation de la lecture publique et la sécurisat…"
     acheteur: "Département-Région de Mayotte"
     type: "Fournitures"
@@ -35,10 +42,3 @@ avis:
     parution: "16 octobre 2026"
     limite: "6 novembre 2026"
     lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-100474"
-  - objet: "Réhabilitation des réseaux CFo et CFa - Lycée de la Cité du Nord"
-    acheteur: "RECT- 976"
-    type: "Travaux"
-    famille: "Marchés entre 90 k€ et seuils européens"
-    parution: "15 octobre 2026"
-    limite: "2 novembre 2026"
-    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-100039"
