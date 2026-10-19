@@ -1,5 +1,12 @@
 # Genere par outils/maj_marches.py - source BOAMP (open data, licence ouverte)
 avis:
+  - objet: "Travaux de curage et d’entretien des réseaux et ouvrages eaux pluviales sur le territoire de la CADEMA"
+    acheteur: "Communauté d'Agglomération de Dembéni-Mamoudzou (976)"
+    type: "Travaux"
+    famille: "Marchés européens"
+    parution: "18 octobre 2026"
+    limite: "17 novembre 2026"
+    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-100562"
   - objet: "Maintenance préventive et corrective des panneaux photovoltaïques au profit des services de l’État relevant du périmètre de la préfecture…"
     acheteur: "Secrétariat général commun de Guadeloupe"
     type: "Services"
@@ -35,10 +42,3 @@ avis:
     parution: "16 octobre 2026"
     limite: "12 novembre 2026"
     lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-100767"
-  - objet: "MARCHÉ DE PRESTATIONS D’ACCOMPAGNEMENT, DE COMMUNICATION ET DE VALORISATION DU PROJET EUROPÉEN COOP-RISKS MAMOUDZOU - MAPUTO"
-    acheteur: "Ville de Mamoudzou (976)"
-    type: "Services"
-    famille: "Marchés entre 90 k€ et seuils européens"
-    parution: "16 octobre 2026"
-    limite: "6 novembre 2026"
-    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-100474"
