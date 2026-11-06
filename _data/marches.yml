@@ -1,5 +1,12 @@
 # Genere par outils/maj_marches.py - source BOAMP (open data, licence ouverte)
 avis:
+  - objet: "Remise en état des quais et protections maritimes en enrochements des ports de plaisance de Dzaoudzi et Mamoudzou"
+    acheteur: "Département-Région de Mayotte"
+    type: "Travaux"
+    famille: "Marchés européens"
+    parution: "6 novembre 2026"
+    limite: "20 novembre 2026"
+    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-107605"
   - objet: "Remise en état des ports de plaisance de Mamoudzou, quai croisière et de Dzaoudzi Remplacement des pontons"
     acheteur: "Département-Région de Mayotte"
     type: "Travaux"
@@ -35,10 +42,3 @@ avis:
     parution: "4 novembre 2026"
     limite: "6 novembre 2026"
     lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-106567"
-  - objet: "Accord-cadre pour la souscription de contrat collectif des établissements du second degré de MAYOTTE"
-    acheteur: "RECT- 976"
-    type: "Services"
-    famille: "Marchés <90 k€ (MAPA)"
-    parution: "4 novembre 2026"
-    limite: "26 novembre 2026"
-    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-107212"
