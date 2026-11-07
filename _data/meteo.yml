@@ -1,8 +1,8 @@
 # Genere par outils/maj_meteo.py - source Open-Meteo (donnees reelles)
-date_affichee: "Vendredi 6 novembre 2026"
+date_affichee: "Samedi 7 novembre 2026"
 tmin: 24
-tmax: 29
-ciel: "Averses faibles"
-vent_kmh: 12
+tmax: 30
+ciel: "Bruine"
+vent_kmh: 10
 temp_mer: 29
-maj: "2026-11-06T12:52+0300"
+maj: "2026-11-07T12:14+0300"

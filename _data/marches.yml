@@ -1,5 +1,12 @@
 # Genere par outils/maj_marches.py - source BOAMP (open data, licence ouverte)
 avis:
+  - objet: "Travaux de reconstruction de Farés Post CHIDO au collège de Kani keli"
+    acheteur: "RECT- 976"
+    type: "Travaux"
+    famille: "Marchés entre 90 k€ et seuils européens"
+    parution: "6 novembre 2026"
+    limite: "20 novembre 2026"
+    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-108386"
   - objet: "Remise en état des quais et protections maritimes en enrochements des ports de plaisance de Dzaoudzi et Mamoudzou"
     acheteur: "Département-Région de Mayotte"
     type: "Travaux"
@@ -35,10 +42,3 @@ avis:
     parution: "5 novembre 2026"
     limite: "26 octobre 2026"
     lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-106812"
-  - objet: "Accord cadre multi attributaire à marchés subséquents: Assistance à Maitrise d'ouvrage pour le montage, le financement et suivi de projet…"
-    acheteur: "Ville de Koungou (976)"
-    type: "Services"
-    famille: "Marchés européens"
-    parution: "4 novembre 2026"
-    limite: "6 novembre 2026"
-    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-106567"
