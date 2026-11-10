@@ -1,5 +1,12 @@
 # Genere par outils/maj_marches.py - source BOAMP (open data, licence ouverte)
 avis:
+  - objet: "Fourniture, personnalisation, gestion et rechargement de cartes d’insertion destinées aux bénéficiaires de dispositifs d’insertion social…"
+    acheteur: "COMMUNE DE TSINGONI"
+    type: "Fournitures"
+    famille: "Marchés européens"
+    parution: "10 novembre 2026"
+    limite: "15 décembre 2026"
+    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-108616"
   - objet: "Collecte des déchets ménagers et assimilés sur le territoire de la CADEMA"
     acheteur: "Communauté d'Agglomération de Dembéni-Mamoudzou (976)"
     type: "Services"
@@ -35,10 +42,3 @@ avis:
     parution: "6 novembre 2026"
     limite: "20 novembre 2026"
     lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-108386"
-  - objet: "Remise en état des quais et protections maritimes en enrochements des ports de plaisance de Dzaoudzi et Mamoudzou"
-    acheteur: "Département-Région de Mayotte"
-    type: "Travaux"
-    famille: "Marchés européens"
-    parution: "6 novembre 2026"
-    limite: "20 novembre 2026"
-    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-107605"
