@@ -1,5 +1,12 @@
 # Genere par outils/maj_marches.py - source BOAMP (open data, licence ouverte)
 avis:
+  - objet: "Marché d'exploitation des quais de transfert de déchets"
+    acheteur: "SIDEVAM (976)"
+    type: "Services"
+    famille: "Marchés européens"
+    parution: "14 novembre 2026"
+    limite: "10 décembre 2026"
+    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-110144"
   - objet: "TRAVAUX D’AMENAGEMENT D’UN JARDIN PUBLIC RECREATIF ET DU FRONT DE MER DU VILLAGE DE M’BOUINI"
     acheteur: "Communauté de Communes du Sud (976)"
     type: "Travaux"
@@ -35,10 +42,3 @@ avis:
     parution: "13 novembre 2026"
     limite: "14 décembre 2026"
     lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-110315"
-  - objet: "Maitrise d'œuvre partielle de la réfection des voiries communales et des ouvrages d’eaux pluviales"
-    acheteur: "Ville de Bouéni (976)"
-    type: "Services"
-    famille: "Marchés entre 90 k€ et seuils européens"
-    parution: "13 novembre 2026"
-    limite: "27 novembre 2026"
-    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-110704"
