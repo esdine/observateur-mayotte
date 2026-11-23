@@ -1,5 +1,12 @@
 # Genere par outils/maj_marches.py - source BOAMP (open data, licence ouverte)
 avis:
+  - objet: "ACHAT ET POSE DE STORES POUR LES BUREAUX"
+    acheteur: "ASSOCIATION MAYOTTE TECHNOPOLE"
+    type: "Fournitures"
+    famille: "Marchés <90 k€ (MAPA)"
+    parution: "23 novembre 2026"
+    limite: "23 décembre 2026"
+    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-113231"
   - objet: "Concours restreint de maîtrise d'œuvre sur esquisse relatif à la construction du CCAS de Bandrélé et d’une crèche de 24 berceaux."
     acheteur: "MAIRIE DE BANDRELE"
     type: "Services"
@@ -35,10 +42,3 @@ avis:
     parution: "20 novembre 2026"
     limite: "28 décembre 2026"
     lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-112189"
-  - objet: "TRAVAUX DE MISE AUX NORMES ET SECURISATION POST-CHIDO DE L’ECOLE ELEMENTAIRE POROANI 1"
-    acheteur: "Ville de Chirongui (976)"
-    type: "Travaux"
-    famille: "Marchés entre 90 k€ et seuils européens"
-    parution: "20 novembre 2026"
-    limite: "14 décembre 2026"
-    lien: "https://www.boamp.fr/pages/avis/?q=idweb:26-112774"
